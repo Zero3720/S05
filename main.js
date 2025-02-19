@@ -1,3 +1,4 @@
+"use strict";
 // objeto do usuário
 const usuario = {
   nome: "Raphael",
@@ -56,6 +57,9 @@ function reservarArmario() {
     "resultado"
   ).innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso!`;
 
+  //Registar a data e hora da reserva no objeto armário armário selecionado para reserva.
+
+  //Logs
   console.log(usuario);
   console.log(armarios);
 }
