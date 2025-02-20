@@ -8,8 +8,22 @@ body {
   transform: skewX(-15deg);
   height: 100px;
   width: 70%;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("Fonts/NimbusSanL-BolIta.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
-  color: black;
+  color: #ffffff;
+  position: absolute;
+  top: -65px;
+  z-index: 3;
+  left: 30px;
+  font-size: 95px;
+  font-family: "NimbusSanL", sans-serif;
 }
