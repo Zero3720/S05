@@ -1,0 +1,15 @@
+body {
+  background-color: white;
+}
+#parallelogram {
+  padding: 8px;
+  display: inline-block;
+  background: #507cd1;
+  transform: skewX(-15deg);
+  height: 100px;
+  width: 70%;
+}
+
+h1 {
+  color: black;
+}
