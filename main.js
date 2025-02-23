@@ -1,4 +1,3 @@
-"use strict";
 // objeto do usuário
 const usuario = {
   nome: "Raphael",
@@ -53,16 +52,24 @@ function reservarArmario() {
   usuario.pendencia = true;
 
   //Registar a data e hora da reserva no objeto armário armário selecionado para reserva.
-  if (usuario.pendencia) {
-    let horario = new Date();
-    horario.setHours(horario.getHours() + 24);
-    let horarioString = horario.toLocaleTimeString();
-  }
+  let horario = new Date();
+  horario.setHours(horario.getHours() + 24);
+
+  //Formatação:
+  let opcoesFormato = {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  };
+  let horarioString = horario.toLocaleString("pt-Br", opcoesFormato);
 
   // Impmimimos uma mensagem de reserva para o usuário.
   document.getElementById(
     "resultado"
-  ).innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso! Você deverá entregar a chave do armário ${armarioSorteado.id} até ${horarioString} sem falta.`;
+  ).innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso! Você deverá entregar a chave do armário ${armarioSorteado.id} até ${horarioString} horas sem falta.`;
 
   //Logs
   console.log(usuario);
