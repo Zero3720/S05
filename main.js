@@ -52,12 +52,17 @@ function reservarArmario() {
   // Finalmente, mudamos a pendencia do usuário para verdadeira.
   usuario.pendencia = true;
 
+  //Registar a data e hora da reserva no objeto armário armário selecionado para reserva.
+  if (usuario.pendencia) {
+    let horario = new Date();
+    horario.setHours(horario.getHours() + 24);
+    let horarioString = horario.toLocaleTimeString();
+  }
+
   // Impmimimos uma mensagem de reserva para o usuário.
   document.getElementById(
     "resultado"
-  ).innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso!`;
-
-  //Registar a data e hora da reserva no objeto armário armário selecionado para reserva.
+  ).innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso! Você deverá entregar a chave do armário ${armarioSorteado.id} até ${horarioString} sem falta.`;
 
   //Logs
   console.log(usuario);
