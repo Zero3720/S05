@@ -18,6 +18,8 @@ const armarios = [
   { id: 8, formato: "duplo", status: false, acessivel: true },
 ];
 
+//Variaveis do Tempo
+
 // função para reserva do armário, incluindo as regras.
 function reservarArmario() {
   // obter tipo de armário selecionado pelo usuário no html.
