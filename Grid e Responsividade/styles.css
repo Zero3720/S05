@@ -4,12 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@media (max-width: 600px) {
-  .header {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 50px);
-  }
-}
 body {
   background-color: white;
   font-family: "NimbusSanL", sans-serif;
@@ -18,11 +12,13 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-.header {
-  display: flex;
+.wrap {
+  display: grid;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  grid-template-columns: repeat(3, 0.2fr);
+  grid-template-rows: 4;
   gap: 12px;
   padding: 20px;
   background: white;
@@ -45,8 +41,4 @@ body {
 .logo {
   width: 250px;
   height: 100px;
-}
-.main {
-}
-.messages {
 }
