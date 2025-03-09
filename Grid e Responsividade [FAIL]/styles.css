@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("Fonts/NimbusSanL-BolIta.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: white;
+  font-family: "NimbusSanL", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrap {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 0.2fr);
+  grid-template-rows: 4;
+  gap: 12px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.item {
+  background-color: #507cd1;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.icon {
+  width: 100px;
+  height: 100px;
+}
+.logo {
+  width: 250px;
+  height: 100px;
+}
